@@ -24,7 +24,7 @@
                             {{-- kosong --}}
                     </div>
                     <div class="col">
-                        <img src="starsoft.png" style="width: 60mm">
+                        <img src="{{ asset('') }}assets/star.png" style="width: 60mm">
                     </div>
                     <div class="col" style="text-align: left">
                             <h5>

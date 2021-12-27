@@ -125,7 +125,6 @@ class BASTController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $title = "BAST";
 
         $bs            = BAST::find($id);
         $bs->no_bast      = $request->no_bast;
@@ -175,7 +174,7 @@ class BASTController extends Controller
     {
        $title = "BAST";
        $keyword = $request->search;
-       $bast1 = BAST::where('client', 'like', "%" . $keyword . "%")->paginate(5);
+       $bast1 = BAST::where('Cname', 'like', "%" . $keyword . "%")->paginate(5);
        return view('finance.bast', compact('bast1', 'title'))->with('i', (request()->input('page', 1) - 1) * 5);
    }
 

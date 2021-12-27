@@ -8,7 +8,7 @@
 
         <div class="card-header"><i class="nav-icon fab fa-buffer"></i>Edit BAST</div>
         <div class="card-body">
-            <form action="{{ route('bast.update') }}" method="post">
+            <form action="{{ route('finance.bast.update') }}" method="post">
                 {{-- row 1 --}}
 				<div class="form-row">
 					{{-- no bast --}}
@@ -57,7 +57,7 @@
                 <div class="form-row mt-4">
 					{{-- subjek --}}
 					<div class="col">
-						<label for="perihal">Perihal</label>
+						<label for="perihal">Subject</label>
 						<input id="perihal" type="text" class="form-control" name="perihal" value="{{ $bst->perihal }}">
 					</div>
 					{{-- company name --}}
@@ -83,12 +83,7 @@
 					<table class="table">
 						<thead>
 							<tr>
-								<th>
-									<select name="item/volume" id="">
-										<option value="1">Item</option>
-										<option value="2">Job Description</option>
-									</select>
-								</th>
+								<th>Item</th>
 								<th>Quantitiy</th>
 								<th>Unit</th>
 								<th>Status</th>
