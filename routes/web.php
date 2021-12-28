@@ -50,7 +50,7 @@ Route::resource('finance/bast', BASTController::class);
 Route::post('finance/bast', [BASTController::class, 'search'])->name('finance.bast.search');
 
 Route::post('finance/bast/create', [BASTController::class, 'store'])->name('finance.bast.store');
-Route::put('finance/bast/edit', [BASTController::class, 'update'])->name('finance.bast.update');
+Route::post('finance/bast/edit', [BASTController::class, 'update'])->name('finance.bast.update');
 Route::get ('finance/bast/print', [App\Http\Controllers\bastcontroller::class, 'show']);
 
 Auth::routes();

@@ -41,7 +41,7 @@
 
                         <tr>
                             <th scope="row">{{ $i }}</th>
-                            <td>{{ $bast->no_inv }}</td>
+                            <td>{{ $bast->no_bast }}</td>
                             <td>{{ $bast->Cname }}</td>
                             <td>{{ $bast->perihal }}</td>
                             <td>{{ $bast->Quan }}</td>

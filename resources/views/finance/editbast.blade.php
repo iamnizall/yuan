@@ -120,7 +120,7 @@
 									@endif
 								</td>
 								<td style="text-align: center">
-										<input class="form-check-input" type="checkbox" name="status">
+										<input class="form-check-input" type="checkbox" name="status" value="{{ $bst->status }}">
 								</td>
 								<td>
 									<button type="button" onclick="add_row()" class="btn btn-success"><i class="bi bi-plus-circle-fill"></i></button>

@@ -54,8 +54,7 @@ class BASTController extends Controller
             'mail'      => 'required',
             'item'    => 'required',
             'Quan'    => 'required',
-            'unit'    => 'required',
-            'status'    => 'required'
+            'unit'    => 'required'
         ]);
         $bs            = new BAST;
         $bs->no_bast      = $request->no_bast;
