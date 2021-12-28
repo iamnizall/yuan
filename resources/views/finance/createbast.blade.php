@@ -5,18 +5,28 @@
 <div class="container">
     <div class="card">
 		
-		
+		@php
+		$now = date('d/m/Y');
+		if($bst == null){
+			$id = 1;
+			$hs = '001' . date('/m')  . '-AR' . date('/Y');
+		}else {
+			$id = $bst->id + 1;
+			$cnf = substr($bst->no_bast, 0, 3);
+			$hs = sprintf("%03d", $cnf + 1) . date('/m')  . '-AR' . date('/Y');
+		}
+		@endphp
 
         <div class="card-header"><i class="nav-icon fab fa-buffer"></i> Create New BAST</div>
         <div class="card-body">
-            <form method="POST" action="{{ route('finance.bast.store') }}">
-			<!-- @csrf -->
+            <form method="POST" action="{{ route('bast.store') }}">
+			@csrf
                 {{-- row 1 --}}
 				<div class="form-row">
 					{{-- no bast --}}
 					<div class="col">		
 						<label for="no_bast">No. Bast</label>
-						<input id="no_bast" type="text" class="form-control" name="no_bast" >
+						<input id="no_bast" type="text" class="form-control" name="no_bast" readonly value="{{ $hs }}" >
 					</div>
 					{{-- type of work --}}
 					<div class="col">
@@ -41,7 +51,7 @@
 					{{-- no invoice --}}
 					<div class="col">
 						<label for="no_inv">No. Invoice</label>
-						<input id="no_inv" type="text" class="form-control" name="no_inv" value="" >
+						<input id="no_inv" type="text" class="form-control" name="no_inv" readonly value="{{ $hs }}" >
 					</div>
 					{{-- project name --}}
 					<div class="col">

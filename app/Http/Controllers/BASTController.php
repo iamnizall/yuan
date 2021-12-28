@@ -122,26 +122,26 @@ class BASTController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update1(Request $request, $id)
     {
 
-        $bs            = BAST::find($id);
-        $bs->no_bast      = $request->no_bast;
-        $bs->t_work      = $request->t_work;
-        $bs->date      = $request->date;
-        $bs->no_inv      = $request->no_inv;
-        $bs->Pname      = $request->Pname;
-        $bs->pClient      = $request->pClient;
-        $bs->perihal      = $request->perihal;
-        $bs->Cname      = $request->Cname;
-        $bs->mail      = $request->mail;
-        $bs->item      = $request->item;
-        $bs->Quan      = $request->Quan;
-        $bs->unit      = $request->unit;
-        $bs->status      = $request->status;
-        $bs->notes      = $request->notes;
-        $bs->signature      = $request->signature;
-        $bs->save();
+        // $bs            = BAST::find($id);
+        // $bs->no_bast      = $request->no_bast;
+        // $bs->t_work      = $request->t_work;
+        // $bs->date      = $request->date;
+        // $bs->no_inv      = $request->no_inv;
+        // $bs->Pname      = $request->Pname;
+        // $bs->pClient      = $request->pClient;
+        // $bs->perihal      = $request->perihal;
+        // $bs->Cname      = $request->Cname;
+        // $bs->mail      = $request->mail;
+        // $bs->item      = $request->item;
+        // $bs->Quan      = $request->Quan;
+        // $bs->unit      = $request->unit;
+        // $bs->status      = $request->status;
+        // $bs->notes      = $request->notes;
+        // $bs->signature      = $request->signature;
+        // $bs->save();
 
         // for($i = 0; $i<count($request->item); $i++){
         //     $dl             = new subbast;
@@ -152,6 +152,8 @@ class BASTController extends Controller
         //     $dl->status      = $request->status[$i];
         //     $dl->save();
         // };
+
+        BAST::update($request->all());
 
         return redirect()->route('bast.index');
     }

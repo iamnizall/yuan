@@ -8,7 +8,8 @@
 
         <div class="card-header"><i class="nav-icon fab fa-buffer"></i>Edit BAST</div>
         <div class="card-body">
-            <form action="{{ route('finance.bast.update') }}" method="post">
+            <form method="POST" action="{{ route('bast.update', $bst->id) }}"> @csrf @method('PUT')
+			@csrf
                 {{-- row 1 --}}
 				<div class="form-row">
 					{{-- no bast --}}

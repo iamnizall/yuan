@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\InvoiceController;
+use App\Http\Controllers\Bast1Controller;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -20,3 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::resource('invoice', InvoiceController::class);
+Route::resource('bast', Bast1Controller::class);
