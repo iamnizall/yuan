@@ -155,7 +155,7 @@
                                   {{-- kosong --}}
                                 </div>
                                 <div class="col">
-                                  Ghislain Faure
+                                {{ $bast->pClient }}
                                 </div>
                             </div>
                             <div class="row">
